@@ -9,6 +9,14 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const __dirname = path.resolve();
+//app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
+
+app.use(express.static(path.join(__dirname, '/frontend/build')));
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
+);
+
 //Connect to MongoDB database
 mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost:27017/eStore', {
   useNewUrlParser: true,
@@ -40,9 +48,9 @@ app.use('/api/products', productRouter);
 
 
 //Get Server health status
-app.get('/', (req, res) => {
-    res.send('Server is ready');
-});
+// app.get('/', (req, res) => {
+//     res.send('Server is ready');
+// });
 
 //Server Error middleware
 app.use((err, req, res, next) => {
