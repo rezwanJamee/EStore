@@ -28,7 +28,7 @@ function App() {
       <div className="grid-container">
         <header className="row">
           <div>
-            <Link className="brand" to="/">eCommerce Store</Link>
+            <Link className="brand" to="/">eStore</Link>
           </div>
           <div>
             <Link to="/cart">
@@ -69,7 +69,11 @@ function App() {
           <Route path="/" component={HomeScreen} exact></Route> 
           
         </main>
-        <footer className="row center">All right reserved</footer>
+        <footer className="row center">
+          {'Copyright © 2021 '}
+          <Link className="myLink" to="https://www.rifatjamee.com/">Rifat.</Link>
+          All right reserved.
+        </footer>
       </div>
     </div>
     </BrowserRouter>

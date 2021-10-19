@@ -38,6 +38,11 @@ footer {
   background-color: #203040;
   color: #ffffff;
 }
+.myLink{
+  color: #ff8000;
+  padding: .5rem;
+  text-decoration: none;
+}
 /* Common */
 h1 {
   font-size: 1.8rem;
