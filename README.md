@@ -1,13 +1,13 @@
 # EStore (MERN Stack)
 A fullstack ecommerce web application. 
 
-<br/>
 
 ### Tools used in the project:
 Frontend: ReactJS and Redux.
+
 Backend: NodeJS, ExpressJS, MongoDB and Jsonwebtoken.
 
-<br/>
+
 
 ### Project Setup:
 - Run npm install on the root folder for the backend node module.
